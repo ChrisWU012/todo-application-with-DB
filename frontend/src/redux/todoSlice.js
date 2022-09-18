@@ -1,37 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit'
-import axios from "axios";
 
 const initialState = {
-    links: [
-        { todo: 'Facebook', priority: 'https://www.facebook.com' },
-        { todo: 'Google', priority: 'https://www.google.com' },
-        { todo: 'BBC', priority: 'https://www.bbc.co.uk' }
+    lists: [
+        { todo: 'buy egg' },
+        { todo: 'buy fish' },
+        { todo: 'sell socks' }
     ]
 }
 
 
 export const linksSlice = createSlice({
-    name: 'links',
+    name: 'lists',
     initialState,
     reducers: {
-        addLink: (state, action) => {
-            state.links = state.links.concat([action.payload])
+        addTodo: (state, action) => {
+            state.lists = state.lists.push([action.payload])
         },
-        clearLinks: state => {
-            state.links = []
+        clearTodo: state => {
+            state.lists = []
         }
     }
 })
 
 
-export const { addLink, clearLinks } = linksSlice.actions;
+export const { addTodo, clearTodo } = linksSlice.actions;
 export default linksSlice.reducer;
-export const getLinkThunk = () => async (dispatch) => {
-    try {
-        const response = await axios.get("http://api.open-notify.org/astros.json");
-        console.log(response);
-        //run success function in linksSlice.actions
-    } catch {
-        //run fail function in linksSlice.actions
-    }
-}

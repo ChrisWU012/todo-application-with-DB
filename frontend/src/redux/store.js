@@ -1,11 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit'
-import linksReducer from './todoSlice'
-import logger from 'redux-logger'
+import { configureStore } from '@reduxjs/toolkit';
+import todoReducer from './todoSlice';
+import authReducer from './authSlice';
+import logger from 'redux-logger';
 
 
 export const store = configureStore({
     reducer: {
-        linksStore: linksReducer,
+        todoStore: todoReducer,
+        authStore: authReducer
     },
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(logger)
 })

@@ -3,11 +3,10 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-    return knex.schema.createTable('todo-list', (table) => {
+    return knex.schema.createTable('todo_list', (table) => {
         table.increments('id')
         table.integer('user_id')
         table.string('todo')
-        table.integer('priority')
     })
 };
 
@@ -16,5 +15,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-    return knex.schema.dropTable('todo-list')
+    return knex.schema.dropTable('todo_list');
 };

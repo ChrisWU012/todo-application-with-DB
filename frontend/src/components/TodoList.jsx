@@ -1,12 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addLink, clearLinks, getLinkThunk } from "../redux/todoSlice";
+import { addTodo, clearTodo } from "../redux/todoSlice";
 import { useState } from "react";
 
 export default function LinksList() {
-    const links = useSelector((state) => state.linksStore.links);
+    const lists = useSelector((state) => state.todoStore.lists);
     const dispatch = useDispatch();
     const [todo, setTodo] = useState("");
-    const [priority, setPriority] = useState("");
 
     return (
         <div>
@@ -17,22 +16,17 @@ export default function LinksList() {
                 onChange={(e) => setTodo(e.target.value)}
             />
             <br />
-            <label>priority:</label>
-            <input type="text" value={priority} onChange={(e) => setPriority(e.target.value)} />
-            <br />
-            <button onClick={() => dispatch(clearLinks())}>Clear Things</button>
-            <button onClick={() => dispatch(addLink({ todo, priority }))}>
+            <button onClick={() => dispatch(clearTodo())}>Clear Things</button>
+            <button onClick={() => dispatch(addTodo({ todo }))}>
                 Add Thing{" "}
             </button>
-            {links && links.length > 0
-                ? links.map((link, i) => (
+            {lists && lists.length > 0
+                ? lists.map((link, i) => (
                     <div key={i}>
-                        {link.todo} - {link.priority}
+                        {link.todo}
                     </div>
                 ))
-                : "No links causes error"}
-
-            <button onClick={() => { dispatch(getLinkThunk()) }}> getLinkThunk</button>
+                : "No lists causes error"}
         </div>
     );
 }
