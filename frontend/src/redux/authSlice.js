@@ -13,19 +13,19 @@ export const authSlice = createSlice({
 })
 export const { login, logout } = authSlice.actions
 
-export const signupThunk = (email, password, username) => async dispatch => {
+export const signupThunk = (email, password) => async dispatch => {
     axios.post(`${process.env.REACT_APP_API_SERVER}/auth/signup`,
-        { email, password, username }).then(response => { console.log(response) })
+        { email, password }).then(response => { console.log(response) })
 }
 export const loginThunk = (email, password) => async dispatch => {
     axios.post(`${process.env.REACT_APP_API_SERVER}/auth/login`,
         { email, password }).then(response => {
             if (response.data === null) {
                 console.log('Login failed');
-                alert("Incorrect email or password");
             }
             else {
-                localStorage.setItem('TOKEN', response.data);
+                console.log("response.data:", response.data.token)
+                localStorage.setItem('TOKEN', response.data.token);
                 dispatch(login());
             }
         })

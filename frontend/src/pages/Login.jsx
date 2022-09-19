@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { loginThunk } from "../redux/authSlice";
 import { useNavigate } from "react-router-dom";
 
-export default function Login(props) {
+export default function Login() {
     const [email, setEmail] = useState("Insert Email");
     const [password, setPassword] = useState("Insert Password");
     const auth = useSelector((state) => state.authStore.isAuthenticated);

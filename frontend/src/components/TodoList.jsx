@@ -1,11 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addTodo, clearTodo } from "../redux/todoSlice";
-import { useState } from "react";
+import { addTodoThunk, clearTodoThunk, getTodoThunk } from "../redux/todoSlice";
+import { useState, useEffect } from "react";
 
 export default function LinksList() {
     const lists = useSelector((state) => state.todoStore.lists);
     const dispatch = useDispatch();
     const [todo, setTodo] = useState("");
+
+    useEffect(() => { dispatch(getTodoThunk()) }, [dispatch]);
 
     return (
         <div>
@@ -16,17 +18,23 @@ export default function LinksList() {
                 onChange={(e) => setTodo(e.target.value)}
             />
             <br />
-            <button onClick={() => dispatch(clearTodo())}>Clear Things</button>
-            <button onClick={() => dispatch(addTodo({ todo }))}>
+            <button onClick={() => dispatch(clearTodoThunk())}>Clear Things</button>
+            <button onClick={() => dispatch(addTodoThunk({ todo }))}>
                 Add Thing{" "}
             </button>
-            {lists && lists.length > 0
-                ? lists.map((link, i) => (
-                    <div key={i}>
-                        {link.todo}
-                    </div>
-                ))
-                : "No lists causes error"}
-        </div>
+            {/* get todo_list from the server */}
+            <br />
+            <br />
+            <h3>Todo List:</h3>
+            {
+                lists && lists.length > 0
+                    ? lists.map((link, i) => (
+                        <div key={i}>
+                            {i + 1}: {link.todo}
+                        </div>
+                    ))
+                    : "Nothing to do right now"
+            }
+        </div >
     );
 }
