@@ -1,6 +1,6 @@
 # To-do React Application with PostgresDB
 
-## Front-end Development
+## Front-end Setting
 
 ### Environment setting
 
@@ -16,12 +16,17 @@ You may also see any lint errors in the console.
 
 ### `yarn test`
 
-## Back-end Development
+## Back-end Setting
 
 ### Install packages before start the server
 
-`npm install express cors knex jsonwebtoken bcrypt`
+`npm install express cors knex jsonwebtoken bcrypt dotenv pg passport passport-jwt sqlite3`
+
+## Environment setting
+
+create a file called `.env` in the project directory, then set up `DB_NAME, DB_USERNAME, DB_PASSWORD, JWT_SECRET` inside the file.
 
 ## Server setting
 
-create
+turn on your postgres server.
+run `knex migrate:latest` then `knex seed:run`.
