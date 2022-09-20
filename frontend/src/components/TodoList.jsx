@@ -17,11 +17,12 @@ export default function LinksList() {
                 value={todo}
                 onChange={(e) => setTodo(e.target.value)}
             />
-            <br />
-            <button onClick={() => dispatch(clearTodoThunk())}>Clear Things</button>
             <button onClick={() => dispatch(addTodoThunk({ todo }))}>
                 Add Thing{" "}
             </button>
+            <br />
+            <button onClick={() => dispatch(clearTodoThunk())}>Clear Things</button>
+
             {/* get todo_list from the server */}
             <br />
             <br />

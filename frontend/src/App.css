@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+button {
+  background-color: rgb(98, 30, 255);
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

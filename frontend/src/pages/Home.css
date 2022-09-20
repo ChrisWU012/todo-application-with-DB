@@ -1,0 +1,30 @@
+.home-page {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.home-page h3 {
+  float: none;
+  display: block;
+  float: left;
+}
+
+a {
+  float: none;
+  display: block;
+  float: right;
+  text-decoration: none;
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}

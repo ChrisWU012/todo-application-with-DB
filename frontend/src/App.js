@@ -8,7 +8,6 @@ import Secret from './pages/Secret';
 function App() {
   return (
     <div className="App">
-      To-do Application
       <Home />
       <Routes>
         <Route path='/login' element={<Login />} />
