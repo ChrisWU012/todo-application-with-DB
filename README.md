@@ -19,17 +19,17 @@ You may also see any lint errors in the console.
 
 `npm install express cors knex jsonwebtoken bcrypt dotenv pg passport passport-jwt sqlite3`
 
-## Environment setting
+### Environment setting
 
 create a file called `.env` in the project directory, then set up `DB_NAME, DB_USERNAME, DB_PASSWORD, JWT_SECRET` inside the file.
 
 
-## Server setting
+### Server setting
 
 turn on your postgres server.
 run `knex migrate:latest` then `knex seed:run`.
 
-## Demo user for testing
+### Demo user for testing
 
 `email: "1@1" password:1` `email: "2@2" password:2` `email: "3@3" password:3`
 
