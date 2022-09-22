@@ -9,14 +9,11 @@ create a file called `.env` in the project directory, then copy `REACT_APP_API_S
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open `http://localhost:3000]` to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `yarn test`
-
-## Back-end Setting
 
 ### Install packages before start the server
 
@@ -34,6 +31,6 @@ run `knex migrate:latest` then `knex seed:run`.
 ## Demo user for testing
 
 `email: "1@1" password:1` `email: "2@2" password:2` `email: "3@3" password:3`
-
+----
 ### Quick Look:
 https://user-images.githubusercontent.com/67308492/191668462-d216c0cf-4c9e-4b7f-ae3f-3395b7fb0d31.mov
