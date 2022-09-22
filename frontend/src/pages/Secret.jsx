@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import TodoList from '../components/TodoList';
-import "./Secret.css";
 import { logoutThunk } from '../redux/authSlice';
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';

@@ -16,12 +16,11 @@ export default function Signup() {
     return (
         <div className='signup-container'>
             <div>
-                <label>Email:
-                    <input onChange={(e) => setEmail(e.currentTarget.value)} type="text" value={email} />
-                </label>
+                <h3>Email:</h3>
+                <input onChange={(e) => setEmail(e.currentTarget.value)} type="text" value={email} />
                 <br />
-                <label>Password:<input onChange={(e) => setPassword(e.currentTarget.value)} type="password" value={password} />
-                </label>
+                <h3>Password:</h3>
+                <input onChange={(e) => setPassword(e.currentTarget.value)} type="password" value={password} />
                 <br />
                 <button onClick={() => { dispatch(signupThunk(email, password)).then(() => { navigate("/login") }) }}>Signup</button>
             </div >

@@ -30,3 +30,7 @@ create a file called `.env` in the project directory, then set up `DB_NAME, DB_U
 
 turn on your postgres server.
 run `knex migrate:latest` then `knex seed:run`.
+
+## Demo user for testing
+
+`email: "1@1" password:1` `email: "2@2" password:2` `email: "3@3" password:3`
