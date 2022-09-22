@@ -23,7 +23,6 @@ You may also see any lint errors in the console.
 
 create a file called `.env` in the project directory, then set up `DB_NAME, DB_USERNAME, DB_PASSWORD, JWT_SECRET` inside the file.
 
-----
 
 ## Server setting
 
@@ -34,7 +33,6 @@ run `knex migrate:latest` then `knex seed:run`.
 
 `email: "1@1" password:1` `email: "2@2" password:2` `email: "3@3" password:3`
 
-----
 
 ### Quick Look:
 https://user-images.githubusercontent.com/67308492/191668462-d216c0cf-4c9e-4b7f-ae3f-3395b7fb0d31.mov
