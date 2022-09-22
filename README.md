@@ -36,5 +36,4 @@ run `knex migrate:latest` then `knex seed:run`.
 `email: "1@1" password:1` `email: "2@2" password:2` `email: "3@3" password:3`
 
 ### Quick Look:
-
-![](./Todo%20React%20App%20with%20PosgretDB%20Tutorial.mov)
+https://user-images.githubusercontent.com/67308492/191668462-d216c0cf-4c9e-4b7f-ae3f-3395b7fb0d31.mov
