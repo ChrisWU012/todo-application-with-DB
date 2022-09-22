@@ -34,3 +34,7 @@ run `knex migrate:latest` then `knex seed:run`.
 ## Demo user for testing
 
 `email: "1@1" password:1` `email: "2@2" password:2` `email: "3@3" password:3`
+
+### Quick Look:
+
+![](./Todo%20React%20App%20with%20PosgretDB%20Tutorial.mov)
